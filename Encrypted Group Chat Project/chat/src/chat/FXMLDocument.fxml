@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.FXMLDocumentController" >
+    <children>
+        <MenuBar useSystemMenuBar="true" AnchorPane.topAnchor="1.0"  AnchorPane.rightAnchor="1.0"  >
+            <Menu text="Help" >
+                <MenuItem text="Help Contents" onAction="#helpContentAction"/> 
+                <MenuItem fx:id="aboutUs" text="About" onAction="#aboutUsAction"/> 
+            </Menu> 
+        </MenuBar>
+        <Label layoutX="20" layoutY="20" text="Enter Port number : " fx:id="lbl" />
+        <TextField fx:id="txtPort" text="13000"  layoutX="135" layoutY="18"  />
+        <Button  text="Start Server" onAction="#handleButtonAction" fx:id="btnStart" AnchorPane.topAnchor="18" AnchorPane.leftAnchor="320" />
+        <TextArea layoutY="80" text=""  style="-fx-font-size:10pt;" layoutX="50" fx:id="txtShow" AnchorPane.topAnchor="50" AnchorPane.rightAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.bottomAnchor="20"/>
+    </children>
+</AnchorPane>

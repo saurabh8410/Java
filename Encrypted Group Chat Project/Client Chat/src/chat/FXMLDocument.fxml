@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" style="-fx-background-color:#454545" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.FXMLDocumentController">
+    <children>      
+        <MenuBar useSystemMenuBar="true" AnchorPane.topAnchor="1.0"  AnchorPane.rightAnchor="1.0" >
+            <Menu text="Help" >
+                <MenuItem text="Help Contents" onAction="#helpContentAction"/> 
+                <MenuItem fx:id="aboutUs" onAction="#aboutUsAction" text="About"/> 
+            </Menu> 
+        </MenuBar>
+        <Label layoutX="14.0" layoutY="10.0" style="-fx-background-color:yellow" text="Server IP address" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="10.0" />
+        <TextField fx:id="txtIP" layoutX="150.0" layoutY="6.0" prefHeight="25.0" prefWidth="390.0" promptText="IP address" text="13000" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="6.0" /> 
+        <Label layoutX="14.0" layoutY="44.0" style="-fx-background-color:yellow" text="Port" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="44.0" />
+        <TextField fx:id="txtPort" layoutX="45.0" layoutY="40.0" prefHeight="25.0" prefWidth="49.0" text="13000" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="40.0" />
+        <Label layoutX="103.0" layoutY="44.0" style="-fx-background-color:yellow" text="Name" AnchorPane.leftAnchor="103.0" AnchorPane.topAnchor="44.0" />
+        <TextField fx:id="txtName" layoutX="147.0" layoutY="40.0" prefWidth="100" AnchorPane.leftAnchor="147.0" AnchorPane.topAnchor="40.0" />
+        <Label layoutX="254.0" layoutY="44.0" style="-fx-background-color:yellow" text="Key" AnchorPane.leftAnchor="254.0" AnchorPane.topAnchor="44.0" />
+        <TextField fx:id="txtKey" layoutX="287.0" layoutY="40.0" AnchorPane.leftAnchor="287.0" AnchorPane.topAnchor="40.0" />
+        <Button fx:id="btnConnect" layoutX="482.0" layoutY="40.0" onAction="#handleConnectAction" text="Connect" AnchorPane.leftAnchor="482.0" AnchorPane.topAnchor="40.0" />       
+        
+        <Label fx:id="label" layoutX="417.0" layoutY="76.0" style="-fx-background-color:yellow" text="Online Users List" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="76.0" />
+        <TextArea fx:id="showChat" style="-fx-font-size:10pt;" editable="false" layoutY="93.0" prefHeight="209.0" prefWidth="397.0" AnchorPane.bottomAnchor="70" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="150" AnchorPane.topAnchor="93.0" />
+        <ListView fx:id="onlineUsers" layoutY="93.0" prefHeight="209.0" prefWidth="130" AnchorPane.bottomAnchor="70" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="93.0" />
+        <TextField fx:id="txtmsg" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="60.0" />
+        <Button fx:id="btnSend" onAction="#handleButtonAction" text="Send" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="10.0" />
+    </children>
+</AnchorPane>
